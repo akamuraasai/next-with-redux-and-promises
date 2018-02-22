@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const City = ({ city }) => {
-  return (
-    <div>
-      <h1>{city.cep}</h1>
-      <h1>{city.localidade}</h1>
-    </div>
-  );
-};
+import CityName from '../CityName/CityName';
+
+const City = ({ city }) => (
+  <div>
+    <h1>{city.cep}</h1>
+    <CityName name={city.localidade} />
+  </div>
+);
 
 City.defaultProps = {
   city: { cep: '', localidade: '' },
