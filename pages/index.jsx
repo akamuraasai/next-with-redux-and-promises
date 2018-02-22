@@ -23,7 +23,7 @@ const Index = ({ getCity, city }) => (
 
 Index.getInitialProps = async ({ store, isServer }) => {
   console.log('isServer: ', isServer);
-  await store.dispatch(getCity(isServer ? '06020194' : '06246000'));
+  await store.dispatch(getCity(isServer ? '06020194' : '06455906'));
   const { city } = store.getState();
   return { city };
 };
